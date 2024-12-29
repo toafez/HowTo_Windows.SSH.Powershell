@@ -1,3 +1,5 @@
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ftoafez%2FHowTo_Windows.SSH.Powershell&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
 # HowTo: SSH-Key mit der Windows PowerShell
 Secure Shell, abgekürzt SSH, ist ein Netzwerkprotokoll zum Aufbau verschlüsselter Verbindungen zwischen Geräten im lokalen Netzwerk oder über das Internet. Die Anmeldung erfolgt in der Regel über die Eingabe eines Benutzernamens und des zugehörigen Passworts. Neben dem Verbindungsaufbau direkt über das Terminal werden auch grafische Benutzeroberflächen wie PuTTY verwendet.
 Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-Verbindungsaufbau zu einem entfernten Server die Eingabe von Benutzername und Passwort. Dies ermöglicht einen automatisierten Verbindungsaufbau ohne die Anwesenheit eines Benutzers. Die Authentifizierung erfolgt hierbei über einen zuvor generierten privaten Schlüssel ohne Passwort und einen daraus resultierenden öffentlichen Schlüssel.
