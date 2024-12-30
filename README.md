@@ -25,13 +25,17 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
 
 	(-b steht für Bit, also die Bitlänge des Verschlüsselungsschlüssels, hier 4096 Bit)
 
-
-2. Unmittelbar nach dem Ausführen des Befehls wirst du aufgefordert, eine Passphrase, also ein Passwort, einzugeben. Die Verwendung einer Passphrase wird einerseits dringend empfohlen, kann aber auch kontraproduktiv sein, wenn man später unbeaufsichtigte und damit automatisierte SSH-Verbindungen aufbauen möchte, um z.B. regelmäßige Backups durchzuführen. In diesem Fall ist von der Eingabe einer Passphrase dringend abzuraten. Es ist also jedem selbst überlassen, ob er eine Passphrase verwenden möchte oder nicht. In diesem Beispiel wird keine Passphrase verwendet, sondern die beiden nachfolgenden Abfragen einfach durch Drücken der Eingabetaste übersprungen.
+2. Unmittelbar nach dem Ausführen des Befehls wirst du gefragt, unter welchem Dateinamen der Schlüssel gespeichert werden soll. Wenn du den vorgeschlagenen Pfad und Dateinamen beibehalten möchtest, drücke einfach die Eingabetaste. Andernfalls kannst du unter Verwendung des vollständigen Pfads einen alternativen Dateinamen ohne Dateiendung eingeben. Beachte, dass der Pfad zur Datei bereits existieren muss. In diesem Beispiel wird der vorgeschlagene Dateiname verwendet.
 
 	```
 	Generating public/private rsa key pair.
 	Enter file in which to save the key (C:\Users\[BENUTZERNAME]/.ssh/id_rsa):
 	Created directory 'C:\\Users\\[BENUTZERNAME]/.ssh'.
+	```
+ 
+3. Anschließend wirst du aufgefordert, eine Passphrase, also ein Passwort, einzugeben. Die Verwendung einer Passphrase wird einerseits dringend empfohlen, kann aber auch kontraproduktiv sein, wenn man später unbeaufsichtigte und damit automatisierte SSH-Verbindungen aufbauen möchte, um z.B. regelmäßige Backups durchzuführen. In diesem Fall ist von der Eingabe einer Passphrase dringend abzuraten. Es ist also jedem selbst überlassen, ob er eine Passphrase verwenden möchte oder nicht. In diesem Beispiel wird keine Passphrase verwendet, sondern die beiden nachfolgenden Abfragen einfach durch Drücken der Eingabetaste übersprungen.
+
+	```
 	Enter passphrase (empty for no passphrase):
 	Enter same passphrase again:
 	```
@@ -58,7 +62,7 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
 	PS C:\Users\[BENUTZERNAME]>
 	```
 
-3. Nach der Ausführung wird ein neues Verzeichnis mit dem Namen .ssh in deinem Homeverzeichnis angelegt, falls es noch nicht existiert. In diesem Verzeichnis befindet sich eine Datei mit dem Namen id_rsa, die den privaten Schlüssel enthält, und eine Datei mit dem Namen id_rsa.pub, die den öffentlichen Schlüssel enthält. Wechsle in das .ssh Verzeichnis durch Eingabe von...
+4. Nach der Ausführung wird ein neues Verzeichnis mit dem Namen .ssh in deinem Homeverzeichnis angelegt, falls es noch nicht existiert. In diesem Verzeichnis befindet sich eine Datei mit dem Namen id_rsa, die den privaten Schlüssel enthält, und eine Datei mit dem Namen id_rsa.pub, die den öffentlichen Schlüssel enthält. Wechsle in das .ssh Verzeichnis durch Eingabe von...
 
 	`cd .ssh`
 
