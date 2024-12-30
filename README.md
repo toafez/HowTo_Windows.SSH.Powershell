@@ -69,9 +69,9 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
 	...anzeigen zu lassen.
 
 ## Den öffentlichen Schlüssel auf den Remote-Server kopieren
-1. Um in Zukunft eine passwortlose SSH-Verbindung zu deinem Remoter-Server aufbauen zu können, ist es notwendig, den öffentlichen Schlüssel in der Datei authorized_keys deines Remote-Servers zu hinterlegen. Um dich mit deinem Remote Server verbinden zu können, benötigst du neben der IP-Adresse [IP-ADRESSE] auch den Benutzernamen [BENUTZERNAME] sowie das zugehörige Passwort. Ersetze daher im folgenden Befehl die Platzhalter für [BENUTZERNAME] und [IP-ADRESSE] durch deine eigenen Daten, ohne die eckigen Klammern zu verwenden. Führe anschließend folgenden Befehl aus
+1. Um in Zukunft eine passwortlose SSH-Verbindung zu deinem Remoter-Server aufbauen zu können, ist es notwendig, den öffentlichen Schlüssel in der Datei authorized_keys deines Remote-Servers zu hinterlegen. Um dich mit deinem Remote Server verbinden zu können, benötigst du neben der IP-Adresse [IP-ADRESSE] und dem [PORT] auch den Benutzernamen [BENUTZERNAME] sowie das zugehörige **Passwort**. Ersetze daher im folgenden Befehl die Platzhalter für [PORT], [BENUTZERNAME] und [IP-ADRESSE] durch deine eigenen Daten, ohne die eckigen Klammern zu verwenden. Führe anschließend folgenden Befehl aus
 
-    `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh [BENUTZERNAME]@[IP-ADRESSE] "cat >> .ssh/authorized_keys"`
+    `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh -p [PORT] [BENUTZERNAME]@[IP-ADRESSE] "cat >> .ssh/authorized_keys"`
 
 2. Nachdem du den folgenden Befehl mit der Eingabetaste bestätigt hast, solltest du eine Meldung sehen, die dich am Ende des Textes auffordert, den Verbindungsaufbau mit **yes** zu bestätigen. `Are you sure you want to continue connecting (yes/no/[fingerprint])?` Diese Meldung erscheint aber nur, wenn du dich zum ersten Mal per SSH mit dem Remote-Server verbinden willst.
 
@@ -94,6 +94,6 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
 
 Baue eine SSH-Verbindung zu deinem Remote-Server auf indem du folgendes eingibst
 
-  `ssh [BENUTZERNAME]@[IP-ADRESSE]`
+  `ssh -p [PORT] [BENUTZERNAME]@[IP-ADRESSE]`
 
 wobei du auch hier die Platzhalter für [BENUTZERNAME] und [IP-ADRESSE] durch deine eigenen Daten ersetzt, ohne die eckigen Klammern zu verwenden. Dieses mal sollte die Verbindung ohne Handshake und ohne die Eingabe eines Passwortes erfolgen.
