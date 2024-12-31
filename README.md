@@ -65,7 +65,7 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
 	PS C:\Users\[BENUTZERNAME]>
 	```
 
-4. Nach der Ausführung wird ein neues Verzeichnis mit dem Namen .ssh in deinem Homeverzeichnis angelegt, falls es noch nicht existiert. In diesem Verzeichnis befindet sich eine Datei mit dem Namen id_rsa, die den privaten Schlüssel enthält, und eine Datei mit dem Namen id_rsa.pub, die den öffentlichen Schlüssel enthält. Wechsle in das .ssh Verzeichnis durch Eingabe von...
+4. Nach der Ausführung befindet sich nun im Verzeichnis 'C:\Users\[BENUTZERNAME]/.ssh>' eine Datei mit dem Namen **id_rsa**, die den **privaten** Schlüssel enthält und eine Datei mit dem Namen **id_rsa.pub**, die den **öffentlichen** Schlüssel enthält.
 
 5. Wechsel mit **cd** _(steht für "change Directory")_ in dieses Verzeichnis
 
