@@ -112,7 +112,7 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
     `type $env:USERPROFILE\.ssh\id_rsa.pub >> $env:USERPROFILE\.ssh/authorized_keys`
 
 ## SSH-Verbindung zu deinem Remote-Server aufbauen
-1. Um dich mit deinem Remote-Server verbinden zu können, benötigst du neben der IP-Adresse und dem Port auch den Benutzernamen sowie das zugehörige Passwort. Ersetze daher im folgenden Befehl die Platzhalter für [PORT], [BENUTZERNAME] und [IP-ADRESSE] durch deine eigenen Daten. Führe anschließend folgenden Befehl aus
+1. Um dich mit deinem Remote Server verbinden zu können, benötigst du neben der IP-Adresse und dem Port auch den Benutzernamen sowie das zugehörige Passwort. Ersetze daher im folgenden Befehl die Platzhalter für [PORT], [BENUTZERNAME] und [IP-ADRESSE] durch deine eigenen Daten. Führe anschließend folgenden Befehl aus
 
     `ssh -p [PORT] [BENUTZERNAME]@[IP-ADRESSE]`
 
