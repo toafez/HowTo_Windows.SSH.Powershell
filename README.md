@@ -27,7 +27,6 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
 
 	_(-b steht für Bit, also die Bitlänge des Verschlüsselungsschlüssels, hier 4096 Bit)_
 
-<<<<<<< HEAD
 
 2. Unmittelbar nach dem Ausführen des Befehls wirst du gefragt, unter welchem Dateinamen die SSH-Schlüssel gespeichert werden sollen. Wenn du den vorgeschlagenen Pfad und Dateinamen beibehalten möchtest, drücke zur Bestätigung einfach die Eingabetaste. Andernfalls kannst du unter Verwendung des vollständigen Pfads einen alternativen Dateinamen ohne Dateiendung eingeben. In diesem Beispiel wird der vorgeschlagene Dateiname verwendet.
 =======
