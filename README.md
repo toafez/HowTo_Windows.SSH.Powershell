@@ -116,7 +116,7 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
 
     `ssh -p [PORT] [BENUTZERNAME]@[IP-ADRESSE]`
 
-2. Nachdem du den folgenden Befehl mit der Eingabetaste bestätigt hast, solltest du eine Meldung sehen, die dich am Ende des Textes auffordert, den Verbindungsaufbau mit **yes** zu bestätigen. `Are you sure you want to continue connecting (yes/no/[fingerprint])?` Diese Meldung erscheint nur, wenn du dich zum ersten Mal per SSH mit dem Remote-Server verbinden willst. Dabei wird ein sogenannter **Fingerprint** in der Datei `~/.ssh/known_hosts` auf deinem Client-Betriebssystem hinterlegt, um zukünftige Verbindungen zu erlauben.
+2. Nachdem du den folgenden Befehl mit der Eingabetaste bestätigt hast, solltest du eine Meldung sehen, die dich am Ende des Textes auffordert, den Verbindungsaufbau mit **yes** zu bestätigen. `Are you sure you want to continue connecting (yes/no/[fingerprint])?` Diese Meldung erscheint nur, wenn du dich zum ersten Mal per SSH mit dem Remote-Server verbinden willst. Dabei wird ein sogenannter **Fingerprint** in der Datei `C:\Users\[BENUTZERNAME]/.ssh/known_hosts` auf deinem Client-Betriebssystem hinterlegt, um zukünftige Verbindungen zu erlauben.
 
     ```
     The authenticity of host '[IP-ADRESSE] ([IP-ADRESSE])' can't be established.
