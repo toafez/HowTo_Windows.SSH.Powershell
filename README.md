@@ -37,9 +37,6 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
 	```
 
 3. Anschließend wirst du aufgefordert, eine Passphrase, also ein Passwort, einzugeben. Die Verwendung einer Passphrase wird einerseits dringend empfohlen, da sie verhindert, dass der private Schlüssel einfach kopiert und verwendet werden kann, selbst wenn dein Client-Betriebssystem kompromittiert wurde. Der Nachteil einer Passphrase ist, dass du sie jedes Mal eingeben musst, wenn du eine Verbindung über SSH herstellen möchtest. Dies kann kontraproduktiv sein, wenn man später unbeaufsichtigte und damit automatisierte SSH-Verbindungen aufbauen möchte, um z.B. automatisierte Backups durchzuführen. In diesem Fall ist von der Eingabe einer Passphrase dringend abzuraten. Es bleibt also jedem selbst überlassen, ob er eine Passphrase verwenden möchte oder nicht. In diesem Beispiel wird keine Passphrase verwendet, sondern die beiden folgenden Abfragen werden einfach durch Drücken der Eingabetaste übersprungen.
-=======
- 
-3. Anschließend wirst du aufgefordert, eine Passphrase, also ein Passwort, einzugeben. Die Verwendung einer Passphrase wird einerseits dringend empfohlen, kann aber auch kontraproduktiv sein, wenn man später unbeaufsichtigte und damit automatisierte SSH-Verbindungen aufbauen möchte, um z.B. regelmäßige Backups durchzuführen. In diesem Fall ist von der Eingabe einer Passphrase dringend abzuraten. Es ist also jedem selbst überlassen, ob er eine Passphrase verwenden möchte oder nicht. In diesem Beispiel wird keine Passphrase verwendet, sondern die beiden nachfolgenden Abfragen einfach durch Drücken der Eingabetaste übersprungen.
 
 	```
 	Enter passphrase (empty for no passphrase):
@@ -68,8 +65,6 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
 	PS C:\Users\[BENUTZERNAME]>
 	```
 
-4. Nach der Ausführung befindet sich nun im Verzeichnis `C:\Users\[BENUTZERNAME]/.ssh` eine Datei mit dem Namen **id_rsa**, die den **privaten** Schlüssel enthält und eine Datei mit dem Namen **id_rsa.pub**, die den **öffentlichen** Schlüssel enthält.
-=======
 4. Nach der Ausführung wird ein neues Verzeichnis mit dem Namen .ssh in deinem Homeverzeichnis angelegt, falls es noch nicht existiert. In diesem Verzeichnis befindet sich eine Datei mit dem Namen id_rsa, die den privaten Schlüssel enthält, und eine Datei mit dem Namen id_rsa.pub, die den öffentlichen Schlüssel enthält. Wechsle in das .ssh Verzeichnis durch Eingabe von...
 
 5. Wechsel mit **cd** _(steht für "change Directory")_ in dieses Verzeichnis
@@ -96,7 +91,6 @@ Durch die Verwendung einer RSA-Schlüssel-Authentifizierung entfällt beim SSH-V
     ```
 
     **Hinweis:** Du kannst dir jederzeit den Inhalt des Verzeichnisses anzeigen lassen, in dem du dich gerade befindest.
-
 
 8. Bei Bedarf kannst du dir den Inhalt des öffentlichen Schlüssels mit dem Befehl **type** auf der Konsole der PowerShell anzeigen lassen. Wenn du den öffentlichen Schlüssel an andere Personen weitergeben möchtest, kannst du den Schlüssel auch kopieren und in einer separaten Textdatei speichern.
 
