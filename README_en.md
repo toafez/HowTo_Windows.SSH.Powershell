@@ -106,14 +106,14 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
     ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCbTJMv9N+pU8n7SaDa9RLazZwB+cR0ke2ggq/Xbria3fsuLGG/wrd5mOt1KYSg7FWiiHUSec0s1sX0OAbWk8qX47UaJKe7SP6so39kVjkRGINACsojvYI773LBpDuKmGzBqsTpBSlYLGLtA7rs669YSEV+8M6Z7NJj6YySDRBL/TSx/cjiJyh5h6yHwW/+nqzFBteqzVoBQ241nGdVzcb5S16DnJLhn2MB7es70yOzq02y5XpFSPswme6sH5/jIkNhp1OU2++jPxLNOkcN73WB3pc3jz7bZxkBSh7zJxy1o39kVjkRGISbznxxbIGDn20iAFoLF6IHl0mWhiuYVwSRjZ8M1Kf71qYv7X3RHMrKQQM5qYtpk/R0NdGrvemDP/5gAI0wOG1D/RQD8nBHzHwuNvLGLtA7rs66tcfj1g+jwwMPzEgX5MsisbIKfhwLJZE34zyfWDj/Vl5n44yG7/YDkYmxtPRsYbfLUm5D+q5dhm5+g3H8t0/eQXHel7chM5I8j4pElDhFOCF8jeaCeawxAGrRn6Dab93BHF1wwowOp4kVWKw0lnvTQfbcIc5BSrxR2uYfQk9dwiiDeE6npEN11mTezRN/tsZ6JE4OrPL8oGha7Fa73AIMvyo+/kKsl2wMpBHYRZq70dp0MTUfIAQPAvNM31yNY4B8oIKV+wBxXw== [USERNAME]@[CLIENT-PC]
     ```
 
-## Creating the authorised_keys file and adding your own public key
-1. The **authorised_keys** file will later contain all the public keys of known remote servers that wish to access your client operating system to enable a passwordless SSH connection, in addition to your own key. To create the **authorised_keys** file, type the following command
+## Creating the authorized_keys file and adding your own public key
+1. The **authorized_keys** file will later contain all the public keys of known remote servers that wish to access your client operating system to enable a passwordless SSH connection, in addition to your own key. To create the **authorized_keys** file, type the following command
 
-    `New-Item -Path $env:USERPROFILE\.ssh\authorised_keys -ItemType File`
+    `New-Item -Path $env:USERPROFILE\.ssh\authorized_keys -ItemType File`
 
 2. Use the following command to enter your own public key in authorized_keys.
 
-    `type $env:USERPROFILE\.ssh\id_rsa.pub >> $env:USERPROFILE\.ssh/authorised_keys`
+    `type $env:USERPROFILE\.ssh\id_rsa.pub >> $env:USERPROFILE\.ssh/authorized_keys`
 
 ## Establishing an SSH connection to your remote server
 1. To connect to your remote server, you need to know the IP address and port, as well as the username and password. To do this, replace the placeholders for [PORT], [USERNAME] and [IP ADDRESS] in the following command with your own data. Then run the following command
@@ -152,9 +152,9 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 ## Transfer the public key to the remote server.
 1. The contents of the id_rsa.pub file, and thus the public key, can now be transferred to the remote server via an SSH connection to the authorised_keys file, which can be created if it does not yet exist. To do this, replace the placeholders for [PORT], [USERNAME] and [IP ADDRESS] in the following command with your own without using the square brackets. Then run the following command
 
-    `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh -p [PORT] [USERNAME]@[IP-ADRESS] "cat >> .ssh/authorised_keys"`
+    `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh -p [PORT] [USERNAME]@[IP-ADRESS] "cat >> .ssh/authorized_keys"`
 
-2. After successfully logging in with your password, the public key was saved to the ~/.ssh/authorised_keys file on your remote server and the connection was closed. You are still in the local PowerShell prompt.
+2. After successfully logging in with your password, the public key was saved to the ~/.ssh/authorized_keys file on your remote server and the connection was closed. You are still in the local PowerShell prompt.
 
     `PS C:\Users\[USERNAME]\.ssh>`
 
@@ -165,6 +165,6 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 
 2. If everything worked, you should now be on your remote server's console without having to enter a password (unless you use one of the passphrases mentioned above). And while you're at it, you can also correct the permissions on the authorized_keys file by issuing the following command
 
-    `chmod 600 ~/.ssh/authorised_keys`
+    `chmod 600 ~/.ssh/authorized_keys`
 
 3. You have now successfully set up passwordless SSH key authentication.
