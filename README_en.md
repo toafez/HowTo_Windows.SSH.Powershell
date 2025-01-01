@@ -29,9 +29,9 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 
 	`ssh-keygen -t rsa -b 4096`
 
-	(-t stands for type, i.e. the type of encryption, in this case rsa for RSA protocol 2)_.
+	_(-t stands for type, i.e. the type of encryption, in this case rsa for RSA protocol 2)_.
 
-	(-b stands for bit, i.e. the bit length of the encryption key, in this case 4096 bits)_.
+	_(-b stands for bit, i.e. the bit length of the encryption key, in this case 4096 bits)_.
 
 2. Immediately after running the command, you will be asked for the filename where the SSH keys will be stored. If you want to keep the suggested path and filename, simply press Enter to confirm. Otherwise, you can enter an alternative filename without extension using the full path. In this example, the suggested filename is used.
 
@@ -83,7 +83,7 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 
     `dir`
 
-    **Example of output
+    **Example of output**
 
     ```
         Directory: C:\Users\[USERNAME]\.ssh
@@ -120,7 +120,7 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 
     `ssh -p [PORT] [USERNAME]@[IP-ADDRESS]`
 
-2. After confirming the following command with the Enter key, you should see a message at the end of the text asking you to confirm the connection with **yes**. Are you sure you want to continue the connection (yes/no/[fingerprint])?` This message only appears if you are connecting to the remote server via SSH for the first time. A **fingerprint** is stored in the `C:\Users\[USERNAME]/.ssh/known_hosts` file on your client operating system to allow future connections.
+2. After confirming the following command with the Enter key, you should see a message at the end of the text asking you to confirm the connection with **yes**. `Are you sure you want to continue the connection (yes/no/[fingerprint])?` This message only appears if you are connecting to the remote server via SSH for the first time. A **fingerprint** is stored in the `C:\Users\[USERNAME]/.ssh/known_hosts` file on your client operating system to allow future connections.
 
     ```
     The authenticity of host '[IP-ADRESSE] ([IP-ADRESSE])' can't be established.
@@ -128,7 +128,7 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
     This key is not known by any other names.
     Are you sure you want to continue connecting (yes/no/[fingerprint])?
     ```
-
+    
     You will now be asked to enter your password to log in to your remote server.
 
     `[USERNAME]@[IP ADDRESS]'s password:`
@@ -137,7 +137,6 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
      ```
     [USERNAME]@[REMOTE-SERVER]:~$ pwd
     /home/[USERNAME]
-
     ```
 
 4. Create a new hidden directory called .ssh and give it the necessary permissions.
