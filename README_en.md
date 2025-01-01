@@ -10,7 +10,7 @@ The following instructions describe **how to set up SSH public key authenticatio
 ## Introduction
 Secure Shell, or SSH, is a network protocol for establishing encrypted connections between devices on the local network or over the Internet. SSH public key authentication uses a private and public key pair to establish a password-free login to a remote server, which can be further secured by entering an additional passphrase if required. The use of such a key pair is therefore much more difficult to compromise than entering a password.
 
-#### _Note: Texts in uppercase letters within square brackets are placeholders and must be replaced with your own details, but may be used in some places for information purposes only. Note that the square brackets are part of the merge and must be removed when you replace them with your own information.
+#### _Note: Texts in uppercase letters within square brackets are placeholders and must be replaced with your own details, but may be used in some places for information purposes only. Note that the square brackets are part of the merge and must be removed when you replace them with your own information._
 
 ## To open PowerShell
 1. Start **PowerShell** from the Windows programs list.
@@ -69,19 +69,19 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 	PS C:\Users\[USERNAME]>
 	```
 
-4. After execution, there will be a file called **id_rsa** containing the **private** key and a file called **id_rsa.pub** containing the **public** key in the directory 'C:\Users\[USERNAME]/.ssh>'.
+4. After execution, there will be a file called **id_rsa** containing the **private** key and a file called **id_rsa.pub** containing the **public** key in the directory `C:\Users\[USERNAME]/.ssh>`.
 
 5. Change to this directory with **cd** _(stands for 'change directory')_.
 
-    cd .ssh
+    `cd .ssh`
 
 6. The prompt at this point should include the .ssh directory as confirmation and look something like this
 
-    `PS C:\Users\[USERNAME]/.ssh>`.
+    `PS C:\Users\[USERNAME]/.ssh>`
 
 7. The contents of the directory can be viewed with the command **dir** _(stands for 'directory')_.
 
-    dir
+    `dir`
 
     **Example of output
 
@@ -98,9 +98,9 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 
 8. If required, you can display the contents of the public key by using the **type** command in the PowerShell console. If you want to share the public key with other people, you can also copy the key and save it in a separate text file.
 
-    type id_rsa.pub
+    `type id_rsa.pub`
 
-    **Example of output
+    **Example of output**
 
     ```
     ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCbTJMv9N+pU8n7SaDa9RLazZwB+cR0ke2ggq/Xbria3fsuLGG/wrd5mOt1KYSg7FWiiHUSec0s1sX0OAbWk8qX47UaJKe7SP6so39kVjkRGINACsojvYI773LBpDuKmGzBqsTpBSlYLGLtA7rs669YSEV+8M6Z7NJj6YySDRBL/TSx/cjiJyh5h6yHwW/+nqzFBteqzVoBQ241nGdVzcb5S16DnJLhn2MB7es70yOzq02y5XpFSPswme6sH5/jIkNhp1OU2++jPxLNOkcN73WB3pc3jz7bZxkBSh7zJxy1o39kVjkRGISbznxxbIGDn20iAFoLF6IHl0mWhiuYVwSRjZ8M1Kf71qYv7X3RHMrKQQM5qYtpk/R0NdGrvemDP/5gAI0wOG1D/RQD8nBHzHwuNvLGLtA7rs66tcfj1g+jwwMPzEgX5MsisbIKfhwLJZE34zyfWDj/Vl5n44yG7/YDkYmxtPRsYbfLUm5D+q5dhm5+g3H8t0/eQXHel7chM5I8j4pElDhFOCF8jeaCeawxAGrRn6Dab93BHF1wwowOp4kVWKw0lnvTQfbcIc5BSrxR2uYfQk9dwiiDeE6npEN11mTezRN/tsZ6JE4OrPL8oGha7Fa73AIMvyo+/kKsl2wMpBHYRZq70dp0MTUfIAQPAvNM31yNY4B8oIKV+wBxXw== [USERNAME]@[CLIENT-PC]
@@ -118,7 +118,7 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 ## Establishing an SSH connection to your remote server
 1. To connect to your remote server, you need to know the IP address and port, as well as the username and password. To do this, replace the placeholders for [PORT], [USERNAME] and [IP ADDRESS] in the following command with your own data. Then run the following command
 
-    ssh -p [PORT] [USERNAME]@[IP-ADDRESS]`.
+    `ssh -p [PORT] [USERNAME]@[IP-ADDRESS]`
 
 2. After confirming the following command with the Enter key, you should see a message at the end of the text asking you to confirm the connection with **yes**. Are you sure you want to continue the connection (yes/no/[fingerprint])?` This message only appears if you are connecting to the remote server via SSH for the first time. A **fingerprint** is stored in the `C:\Users\[USERNAME]/.ssh/known_hosts` file on your client operating system to allow future connections.
 
@@ -131,7 +131,7 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 
     You will now be asked to enter your password to log in to your remote server.
 
-    [USERNAME]@[IP ADDRESS]'s password:` 3.
+    `[USERNAME]@[IP ADDRESS]'s password:`
 
 3. Once you have successfully logged in, you should be on your remote server's console. Again check that you are in the logged-in user's home directory.
      ```
@@ -142,30 +142,30 @@ Secure Shell, or SSH, is a network protocol for establishing encrypted connectio
 
 4. Create a new hidden directory called .ssh and give it the necessary permissions.
 
-    `mkdir .ssh`.
+    `mkdir .ssh`
 
-    chmod 700 .ssh
+    `chmod 700 .ssh`
 
 6. Log out of the remote server to return to the console of your client operating system.
 
-    exit
+    `exit`
 
 ## Transfer the public key to the remote server.
 1. The contents of the id_rsa.pub file, and thus the public key, can now be transferred to the remote server via an SSH connection to the authorised_keys file, which can be created if it does not yet exist. To do this, replace the placeholders for [PORT], [USERNAME] and [IP ADDRESS] in the following command with your own without using the square brackets. Then run the following command
 
-    `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh -p [PORT] [USERNAME]@[IP-ADRESS] ‘cat >> .ssh/authorised_keys’`
+    `type $env:USERPROFILE\.ssh\id_rsa.pub | ssh -p [PORT] [USERNAME]@[IP-ADRESS] "cat >> .ssh/authorised_keys"`
 
 2. After successfully logging in with your password, the public key was saved to the ~/.ssh/authorised_keys file on your remote server and the connection was closed. You are still in the local PowerShell prompt.
 
-    PS C:\Users\[USERNAME]\.ssh>`
+    `PS C:\Users\[USERNAME]\.ssh>`
 
 ## Re-establish the SSH connection to your remote server...
 1. You should now be able to log in to the remote server without having to enter a password. To check if this works, log in to the remote server again.
 
-    ssh -p [PORT] [USERNAME]@[IP-ADRESS]`.
+    `ssh -p [PORT] [USERNAME]@[IP-ADRESS]`
 
 2. If everything worked, you should now be on your remote server's console without having to enter a password (unless you use one of the passphrases mentioned above). And while you're at it, you can also correct the permissions on the authorized_keys file by issuing the following command
 
-    chmod 600 ~/.ssh/authorised_keys
+    `chmod 600 ~/.ssh/authorised_keys`
 
 3. You have now successfully set up passwordless SSH key authentication.
