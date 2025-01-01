@@ -7,10 +7,11 @@ English | [Deutsch](README.md)
 ## What is this about?
 The following instructions describe **how to set up SSH public key authentication** from a local Linux system to a remote Linux server **using Windows PowerShell**.
 
-## Introduction
-Secure Shell, or SSH, is a network protocol for establishing encrypted connections between devices on the local network or over the Internet. SSH public key authentication uses a private and public key pair to establish a password-free login to a remote server, which can be further secured by entering an additional passphrase if required. The use of such a key pair is therefore much more difficult to compromise than entering a password.
+# Introduction
+Secure Shell, or SSH for short, is a network protocol for establishing encrypted connections between devices on the local network or over the Internet. SSH public key authentication uses a private and public key pair to establish a password-free login to a remote server, which can be further secured by entering an additional passphrase if required. The use of such a key pair is therefore much more difficult to compromise than entering a password.
 
-#### _Note: Texts in uppercase letters within square brackets are placeholders and must be replaced with your own details, but may be used in some places for information purposes only. Note that the square brackets are part of the merge and must be removed when you replace them with your own information._
+#### _Note: Text in uppercase within square brackets is a placeholder and must be replaced with your own information, but may be used in some places for information purposes only. Please note that the square brackets are part of the placeholder and must also be removed when replacing with your own information._
+
 
 ## To open PowerShell
 1. Start **PowerShell** from the Windows programs list.
