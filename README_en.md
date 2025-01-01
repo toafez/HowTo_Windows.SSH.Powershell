@@ -25,16 +25,16 @@ Secure Shell, or SSH for short, is a network protocol for establishing encrypted
 
     **Note:** Starting with Windows 10 1809, the OpenSSH client is installed by default. When used with Windows PowerShell 5.1 or later, SSH keys can be easily created.
 
-## To create a key pair
-1. You can now begin to create a new **SSH key pair** consisting of a **public** and a **private** key. This is done using the **ssh-keygen** command. By simply typing the ssh-keygen command, different encryption algorithms can be used depending on the configuration. You should therefore always specify which algorithm is to be used. In the following, the **RSA** algorithm is used with an encryption of **4096** bits.
+## Create an SSH key pair
+1. You can now start creating a new **SSH key pair** consisting of a **public** and a **private key**. This is done using the **ssh-keygen** command. By simply typing the ssh-keygen command, different encryption algorithms can be used depending on the configuration. You should therefore always specify which algorithm is to be used. In the following, the **RSA** algorithm is used with an encryption of **4096** bits.
 
-	`ssh-keygen -t rsa -b 4096`
+    `ssh-keygen -t rsa -b 4096`
 
-	_(-t stands for type, i.e. the type of encryption, in this case rsa for RSA protocol 2)_.
+    _(**-t** stands for type, i.e. the type of encryption, in this case rsa for RSA protocol 2)_
 
-	_(-b stands for bit, i.e. the bit length of the encryption key, in this case 4096 bits)_.
+    _(**-b** stands for bit, i.e. the bit length of the encryption key, in this case 4096 bits)_
 
-2. Immediately after running the command, you will be asked for the filename where the SSH keys will be stored. If you want to keep the suggested path and filename, simply press Enter to confirm. Otherwise, you can enter an alternative filename without extension using the full path. In this example, the suggested filename is used.
+2. Immediately after running the command, you will be asked for the filename to store the SSH keys in. If you want to keep the suggested path and filename, simply press Enter to confirm. Otherwise, you can enter an alternative filename without extension using the full path. In this example, the suggested filename is used.
 
 	```
 	Generating public/private rsa key pair.
